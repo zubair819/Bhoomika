@@ -9,16 +9,11 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
     <style>
-        /* Resetting default margin and padding */
-/* Resetting default margin and padding */
-/* Resetting default margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Sticky Buttons */
 .sticky-buttons {
     position: fixed;
     top: 20px;
@@ -26,7 +21,6 @@
     display: flex;
     align-items: center;
 }
-
 .sticky-buttons button {
     margin-left: 10px;
     padding: 8px 16px;
@@ -41,8 +35,6 @@
     overflow: hidden; /* Hide overflow text */
     text-overflow: ellipsis; /* Show ellipsis for overflow text */
 }
-
-/* Adjust layout for mobile screens */
 @media screen and (max-width: 300px) {
     .sticky-buttons {
         top: auto;
@@ -50,36 +42,28 @@
         right: 10px;
         justify-content: center; /* Center buttons horizontally */
     }
-
     .sticky-buttons button {
         margin: 5px; /* Adjust margin for smaller screens */
         padding: 6px 12px; /* Adjusted padding for smaller screens */
         font-size: 14px; /* Adjust font size for smaller screens */
     }
 }
-
 header img {
     position: absolute;
     top: 20px;
     left: 20px;
     width: 100px; /* Adjust as needed */
 }
-
 .sticky-buttons button:hover {
     background-color: #333;
     color: #fff;
 }
-
-
-/* College Logo */
 header img {
     position: absolute;
     top: 20px;
     left: 20px;
     width: 100px; /* Adjust as needed */
 }
-
-/* Sticky Navbar Container */
 .sticky-navbar-container {
     position: fixed;
     top: -60px; /* Move navbar off the screen initially */
@@ -89,13 +73,9 @@ header img {
     transition: top 0.3s; /* Smooth transition effect */
     z-index: 1000; /* Ensure the navbar is on top of other content */
 }
-
 .sticky-navbar-container.sticky {
     top: 0; /* Bring navbar back to top of screen when scrolled */
 }
-
-
-/* Landing Section */
 .landing-section {
     position: relative;
     height: 100vh;
@@ -104,7 +84,6 @@ header img {
     justify-content: center;
     text-align: center;
 }
-
 .background-image {
     position: absolute;
     top: 0;
@@ -116,24 +95,20 @@ header img {
     background-position: center;
     opacity: 0.7; /* Adjust opacity as needed */
 }
-
 .college-info {
     z-index: 1;
 }
-
 .college-info h1 {
     font-size: 3em;
     font-weight: bold;
     color: #fff;
     margin-bottom: 20px;
 }
-
 .college-info p {
     color: #fff;
     font-size: 1.2em;
     margin-bottom: 20px;
 }
-
 #show-more {
     padding: 10px 20px;
     color: white;
@@ -142,31 +117,25 @@ header img {
     background-color: transparent; /* Remove background color */
     transition: background-color 0.3s ease;
 }
-
 #show-more:hover {
     background-color: #333; /* Hover background color */
     color: #fff; /* Hover text color */
 }
-
-/* Events Section */
 .events-section {
     padding: 50px 0;
     text-align: center;
     position: relative; /* Ensure relative positioning for containing the absolute positioned event boxes */
 }
-
 .events-section h2 {
     font-size: 2em;
     font-weight: bold;
     margin-bottom: 30px;
 }
-
 .event-boxes {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .event-box {
     width: 24%;
     height: 200px; /* Initial height */
@@ -175,40 +144,33 @@ header img {
     position: relative; /* Positioning each box absolutely */
     transition: width 0.9s ease, height 0.9s ease; /* Transition for width and height change */
 }
-
 .event-box img {
     width: 200px;
     height: auto;
     object-fit: cover;
     transition: transform 0.9s ease; /* Transition for image scale */
 }
-
 .event-box:hover {
     width: calc(45% - 20px); /* Expanding to 50% of the screen width */
     height: 300px; /* Adjusted height */
     z-index: 1; /* Ensures the hovered box is on top */
 }
-
 .event-box:hover img {
     transform: scale(50); /* Zoom out effect for the image inside */
 }
-
 .image-section {
     text-align: center;
     padding: 100px 0px 50px;
 }
-
 @media screen and (max-width: 768px) {
     .event-box {
         width: calc(50% - 20px); /* Display two event boxes per row */
         margin-bottom: 20px; /* Add space between event boxes */
     }
-
     .event-box img {
         height: 100%; /* Ensure image fills the box vertically */
     }
 }
-
 .image-container {
     position: relative;
     display: flex;
@@ -217,17 +179,14 @@ header img {
     justify-content: center;
     height: 100%; /* Ensure full height */
 }
-
 .image-container p {
     margin-bottom: 20px;
     font-size: 2em;
 }
-
 .event-button {
     text-align: center;
     margin-top: 20px; /* Adjust spacing as needed */
 }
-
 .show-more-btn {
     padding: 10px 20px;
     color: white;
@@ -237,24 +196,20 @@ header img {
     text-decoration: none; /* Remove default link underline */
     transition: background-color 0.3s ease;
 }
-
 .show-more-btn:hover {
     background-color: #555; /* Hover background color */
 }
-
 .image-section {
     text-align: center;
     padding: 50px 0; /* Adjust padding as needed */
     position: relative;
 }
-
 .image-container {
     position: relative;
     display: inline-block;
     width: 100%;
     height: 50vh; /* Set height to 50% of viewport height */
 }
-
 .image-container img {
     position: absolute;
     top: 0;
@@ -264,7 +219,6 @@ header img {
     object-fit: cover; /* Ensure image covers the entire container */
     z-index: -1; /* Send image to the background */
 }
-
 .image-container p {
     position: absolute;
     top: 50%; /* Position the text at the vertical center */
@@ -274,7 +228,6 @@ header img {
     font-size: 1.5em; /* Adjust font size as needed */
     z-index: 1; /* Ensure text is above the image */
 }
-
 #registration-btn {
     position: absolute;
     bottom: 20px; /* Adjust button position from the bottom */
@@ -289,25 +242,20 @@ header img {
     transition: background-color 0.3s ease;
     z-index: 1; /* Ensure button is above the image */
 }
-
 #registration-btn:hover {
     background-color: #333; /* Hover background color */
     color: #fff; /* Hover text color */
 }
-
-/* About Section */
 .about-section {
     text-align: center;
     padding: 50px 0;
 }
-
 .box-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px; /* Adjust spacing between boxes */
 }
-
 .info-box {
     flex-basis: calc(100% - 40px); /* Adjust width of boxes for mobile view */
     padding: 20px;
@@ -317,59 +265,41 @@ header img {
     transition: transform 0.3s, box-shadow 0.3s, opacity 1.2s; /* Added opacity transition */
     opacity: 0; /* Initially hide the boxes */
 }
-
-/* Adjust box width for tablet and larger screens */
 @media screen and (min-width: 768px) {
     .info-box {
         flex-basis: calc(50% - 20px);
     }
 }
-
-/* Adjust box width for desktop screens */
 @media screen and (min-width: 992px) {
     .info-box {
         flex-basis: calc(33.33% - 20px);
     }
 }
-
-/* Add fade-in animation when box enters viewport */
 .info-box.fade-in {
     opacity: 1;
     transform: translateY(0);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Enhance the shadow */
 }
-
 .info-box h3 {
     color: #333;
     margin-bottom: 10px;
 }
-
 .info-box p {
     color: #666;
     font-size: 16px;
     line-height: 1.6;
 }
-
-/* Footer */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 20px 0;
 }
-
  </style>
-    <script>
-    
-    </script>
-    <!-- Include any other JavaScript files here -->
 </head>
 <body>
-    
-    <!-- Background Image with College Name and Description -->
     <section class="landing-section">
         <div class="background-image">
-            <!-- Your background image here -->
             
         </div>
         <div class="college-info">
@@ -390,9 +320,6 @@ footer {
             </div>
         </div>
     </header>
-    
-    <!-- Events Section -->
-    <!-- Events Section -->
 <section class="events-section">
     <h2>Events</h2>
     <div class="event-boxes">
